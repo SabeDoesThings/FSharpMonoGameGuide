@@ -11,7 +11,7 @@ cd <ProjectName>
 dotnet add package MonoGame.Framework.<Platform>
 ```
 
-## create Game.fs and Program.fs
+## create Game1.fs and Program.fs
 Game1.fs
 ```fsharp
 namespace <Project Name>
@@ -105,3 +105,4 @@ dotnet tool install dotnet-mgcb-editor-linux
 dotnet tool install dotnet-mgcb-editor-mac
 
 ```
+
