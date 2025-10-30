@@ -25,7 +25,6 @@ type Game1() as this =
 
     let graphics = new GraphicsDeviceManager(this)
     let mutable spriteBatch: SpriteBatch = null
-    let mutable ballTexture: Texture2D = null
 
     do
         this.Content.RootDirectory <- "Content"
@@ -38,27 +37,26 @@ type Game1() as this =
 
     override _.LoadContent() =
         spriteBatch <- new SpriteBatch(this.GraphicsDevice)
-        ballTexture <- this.Content.Load<Texture2D>("ball")
 
         // TODO: use this.Content to load your game content here
 
-    override _.Update(gameTime) =
+    override _.Update(gameTime: GameTime) =
         let kstate = Keyboard.GetState()
-        if kstate.IsKeyDown(Keys.Escape) then
+        if kstate.IsKeyDown Keys.Escape then
             this.Exit()
 
         // TODO: Add your update logic here
 
-        base.Update(gameTime)
+        base.Update gameTime
 
-    override _.Draw(gameTime) =
-        this.GraphicsDevice.Clear(Color.CornflowerBlue)
+    override _.Draw(gameTime: GameTime) =
+        this.GraphicsDevice.Clear Color.CornflowerBlue
 
         spriteBatch.Begin()
         // TODO: Add your drawing code here
         spriteBatch.End()
 
-        base.Draw(gameTime)
+        base.Draw gameTime
 ```
 Program.fs
 ```fsharp
@@ -103,6 +101,4 @@ dotnet tool install dotnet-mgcb-editor
 dotnet tool install dotnet-mgcb-editor-windows
 dotnet tool install dotnet-mgcb-editor-linux
 dotnet tool install dotnet-mgcb-editor-mac
-
 ```
-
