@@ -2,8 +2,8 @@
 
 ## start by creating a new F# console project.
 ```
-dotnet new console -lang F# -o MyGame
-cd MyGame
+dotnet new console -lang F# -o <ProjectName>
+cd <ProjectName>
 ```
 
 ## add the MonoGame Framework
@@ -103,4 +103,5 @@ dotnet tool install dotnet-mgcb-editor
 dotnet tool install dotnet-mgcb-editor-windows
 dotnet tool install dotnet-mgcb-editor-linux
 dotnet tool install dotnet-mgcb-editor-mac
+
 ```
