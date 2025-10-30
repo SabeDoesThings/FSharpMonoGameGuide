@@ -1,4 +1,4 @@
-# Setup
+# Setup (for DesktopGL)
 
 ## start by creating a new F# console project.
 ```
@@ -8,7 +8,7 @@ cd <ProjectName>
 
 ## add the MonoGame Framework
 ```
-dotnet add package MonoGame.Framework.<Platform>
+dotnet add package MonoGame.Framework.DesktopGL
 ```
 
 ## create Game1.fs and Program.fs
@@ -83,7 +83,7 @@ the .fsproj file should look like this:
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.<Platform>" Version="3.8.4.1" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.4.1" />
   </ItemGroup>
 
 </Project>
